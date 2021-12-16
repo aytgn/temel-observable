@@ -3,7 +3,8 @@ import { filter } from "rxjs/operators";
 
 let emel = {
   next(dergiNumarasi) {
-    if (dergiNumarasi % 2 === 0) console.log("doğru dergi!");
+    if (dergiNumarasi % 2 === 0)
+      console.log("doğru dergi!, dergi numarası: " + dergiNumarasi);
     else console.log("yanlış dergi!");
   },
   error() {
@@ -41,5 +42,3 @@ const aytuTakibi = dergiTakibi.pipe(
     return dergiNumarasi % 2 === 0;
   })
 );
-
-aytuTakibi.subscribe(emel);
